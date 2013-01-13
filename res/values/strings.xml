@@ -1,0 +1,16 @@
+<resources>
+
+    <string name="app_name">Dhammapada</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_dhammapada">Dhammapada</string>
+    <color name="dp_color_bkgnd">#000000</color>
+    <color name="dp_color_fgnd">#FFFFFF</color>
+    <string name="dp_title">Dhammapada</string>
+    <string name="dp_caption">The path of the Dhamma</string>
+    <string name="dp_ack">The Buddha</string>
+    <string name="chapNum">Chapter #</string>
+    <string name="prev">&lt;</string>
+    <string name="next">&gt;</string>
+
+</resources>

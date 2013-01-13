@@ -1,0 +1,83 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/agLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/dp_color_bkgnd"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp" >
+
+   <TextView
+        android:id="@+id/agTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/dp_title"
+        android:layout_marginTop="20sp"
+        android:background="@color/dp_color_bkgnd"
+        android:textColor="@color/dp_color_fgnd"
+        android:textSize="30sp"
+        />
+   <TextView
+        android:id="@+id/agVerse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/dp_caption"
+        android:layout_centerVertical="true"
+        android:layout_below="@id/agTitle"
+        android:layout_marginTop="10sp"
+        android:layout_marginLeft="20sp"
+        android:layout_marginRight="20sp"
+        android:background="@color/dp_color_bkgnd"
+        android:textColor="@color/dp_color_fgnd"
+        />
+    <TextView
+        android:id="@+id/agAck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/dp_ack"
+        android:layout_centerVertical="true"
+        android:layout_below="@id/agVerse"
+        android:layout_marginTop="10sp"
+        android:background="@color/dp_color_bkgnd"
+        android:textColor="@color/dp_color_fgnd"
+        />
+    
+    <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+         android:id="@+id/tblL"
+         android:layout_below="@id/agAck"
+         android:layout_width="fill_parent"
+         android:layout_height="fill_parent"
+         android:stretchColumns="1"
+         android:layout_marginTop="15sp"
+     >
+     <TableRow>
+     <TextView    
+       android:id="@+id/chapRdable"
+       android:text="@string/chapNum"
+       android:background="@color/dp_color_bkgnd"
+       android:textColor="@color/dp_color_fgnd"
+     />
+     <EditText
+      android:id="@+id/chapNumET"
+      android:inputType="number"
+      android:textColor="@color/dp_color_fgnd"
+      android:imeOptions="actionDone"
+     />
+     </TableRow>
+     </TableLayout>
+     <Button
+        android:id="@+id/prevBtn"
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:onClick="prevButtonClick"
+        android:layout_alignParentBottom="true"
+        android:text="@string/prev" />
+    <Button
+        android:id="@+id/nextBtn"
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:onClick="nextButtonClick"
+        android:text="@string/next" />
+</RelativeLayout>
