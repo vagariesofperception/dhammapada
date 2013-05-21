@@ -84,8 +84,7 @@ public class NewChapterActivity extends Activity implements TextView.OnEditorAct
 
 			     instream.close();
 		    } else
-		    	Log.i(logTag, "Instream null for" + rName.toString());
-		 
+		    	;
 		  } catch (java.io.FileNotFoundException e) {
 		  
 		  }
@@ -154,11 +153,9 @@ public class NewChapterActivity extends Activity implements TextView.OnEditorAct
         {
           ArrayList<String> verses = chapToVersesMap.get(new Integer(currentChapState));
           if (verses == null) {
-        	  Log.i(logTag, "Verses is null for chapter number:" + message);
         	  return;
           }
           if (currentVerseNumState >= verses.size()) {
-        	  Log.i(logTag, "Current Verse Number exceeds number of verses in current chapter");
         	  return;
           }
           
@@ -195,7 +192,6 @@ public class NewChapterActivity extends Activity implements TextView.OnEditorAct
     
     	boolean handled = false;
     	if (actionId == EditorInfo.IME_ACTION_DONE) {
-    		Log.i(logTag, "Got EditorInfo.IME_ACTION_DONE");
     		handled = true;
     		
     		String s = v.getText().toString();
@@ -207,8 +203,7 @@ public class NewChapterActivity extends Activity implements TextView.OnEditorAct
     		if (s.length() == 0)
     			return handled;
     		Integer chapNum = Integer.decode(s);
-    		Log.i(logTag, "Got:" + s + " with len:" + String.valueOf(s.length()));
-
+    	
     		if (chapNum != null) {
     			
     			int vNum = chapNum.intValue();
@@ -234,7 +229,6 @@ public class NewChapterActivity extends Activity implements TextView.OnEditorAct
     				
     		} else
     		{
-    		  Log.i(logTag, "Did not get an integer for verseNum!");
     		}
         }
         return handled;
