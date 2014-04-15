@@ -55,7 +55,7 @@ public class NewChapterActivity extends Activity implements TextView.OnEditorAct
 	
 	private void readInVerses() {
 		
-		for (int i=0; i < NUM_CHAPTERS; ++i)
+		for (int i=0; i <= NUM_CHAPTERS; ++i)
 		{
 		  ArrayList<String> verses = chapToVersesMap.get(Integer.valueOf(i));
 		  
@@ -100,7 +100,7 @@ public class NewChapterActivity extends Activity implements TextView.OnEditorAct
         if (chapToVersesMap == null)
         {
             chapToVersesMap = new HashMap<Integer, ArrayList<String>>();
-            for (int i=0; i < NUM_CHAPTERS; ++i)
+            for (int i=0; i <= NUM_CHAPTERS; ++i)
               chapToVersesMap.put(Integer.valueOf(i), new ArrayList<String>());
 
             readInVerses();
@@ -247,7 +247,7 @@ public class NewChapterActivity extends Activity implements TextView.OnEditorAct
        verses = chapToVersesMap.get(new Integer(currentChapState));
        if (currentVerseNumState == verses.size()-1)
        {
-    	   if (currentChapState+1 == NUM_CHAPTERS)
+    	   if (currentChapState+1 > NUM_CHAPTERS)
     	    return;
     	   else {
     		 currentChapState++;
